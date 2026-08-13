@@ -1,0 +1,39 @@
+/*
+ * Design tokens — values sourced from live-site forensic analysis
+ * (see rebuild specification). Update here, not in component files.
+ */
+:root {
+  /* Color */
+  --color-bg: #faf7f3;
+  --color-text: #111111;
+  --color-surface-dark: #111111;
+  --color-text-on-dark: #ffffff;
+  --color-accent: #0099ff;
+  --color-muted: #767676;
+  --color-border: rgba(17, 17, 17, 0.1);
+
+  /* Radius */
+  --radius-pill: 20px;
+  --radius-card-image: 20px;
+  --radius-button: 8px;
+
+  /* Z-index */
+  --z-nav: 10;
+  --z-badge: 10;
+
+  /* Layout */
+  --container-max: 1180px;
+  --container-padding: 24px;
+
+  /* Spacing */
+  --space-section-y: 120px;
+  --space-section-y-tablet: 80px;
+  --space-section-y-mobile: 56px;
+  --space-nav-top: 30px;
+  --gap-card-grid: 24px;
+
+  /* Motion */
+  --ease-standard: cubic-bezier(0.65, 0, 0.35, 1);
+  --duration-fast: 0.3s;
+  --duration-medium: 0.6s;
+}
