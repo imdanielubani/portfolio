@@ -1,0 +1,29 @@
+/*
+ * Reproduces the reference site's per-character hover roll: a stacked
+ * duplicate row slides up to replace the visible row on hover. Pure CSS
+ * (rather than Motion) — hover-only transform toggles don't need JS, and
+ * this matches the reference's underlying mechanism closely enough
+ * (translateY by one line-height on hover).
+ */
+.wrapper {
+  display: inline-block;
+  overflow: hidden;
+  vertical-align: top;
+  height: 1em;
+  line-height: 1;
+}
+
+.track {
+  display: flex;
+  flex-direction: column;
+  transition: transform var(--duration-fast) var(--ease-standard);
+}
+
+.wrapper:hover .track {
+  transform: translateY(-50%);
+}
+
+.row {
+  white-space: nowrap;
+  line-height: 1;
+}

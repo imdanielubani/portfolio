@@ -25,6 +25,12 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* Baseline clearance so the fixed nav pill never overlaps page content.
+   Individual sections (e.g. Hero) may add further spacing on top of this. */
+main {
+  padding-top: calc(var(--space-nav-top) + 60px + 20px);
+}
+
 a {
   color: inherit;
   text-decoration: none;

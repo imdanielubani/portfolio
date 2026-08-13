@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Archivo } from "next/font/google";
+import { FloatingNav } from "@/components/layout/FloatingNav";
 import "./globals.css";
 
 const archivo = Archivo({
@@ -20,7 +21,10 @@ export default function RootLayout({
 }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en" className={archivo.variable}>
-      <body>{children}</body>
+      <body>
+        <FloatingNav />
+        {children}
+      </body>
     </html>
   );
 }
