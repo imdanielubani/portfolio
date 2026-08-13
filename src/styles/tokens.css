@@ -27,8 +27,6 @@
 
   /* Spacing */
   --space-section-y: 120px;
-  --space-section-y-tablet: 80px;
-  --space-section-y-mobile: 56px;
   --space-nav-top: 30px;
   --gap-card-grid: 24px;
 
@@ -36,4 +34,17 @@
   --ease-standard: cubic-bezier(0.65, 0, 0.35, 1);
   --duration-fast: 0.3s;
   --duration-medium: 0.6s;
+}
+
+/* Same breakpoints as typography.css — kept in sync intentionally. */
+@media (max-width: 1279px) {
+  :root {
+    --space-section-y: 80px;
+  }
+}
+
+@media (max-width: 809px) {
+  :root {
+    --space-section-y: 56px;
+  }
 }

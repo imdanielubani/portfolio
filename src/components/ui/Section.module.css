@@ -1,0 +1,7 @@
+.section {
+  padding-top: var(--space-section-y);
+}
+
+.section[data-pad-bottom="true"] {
+  padding-bottom: var(--space-section-y);
+}
