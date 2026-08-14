@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import Image from "next/image";
 import { getProject, projects } from "@/data/projects";
 import { Container } from "@/components/ui/Container";
-import { ImagePlaceholder } from "@/components/ui/ImagePlaceholder";
 import { Section } from "@/components/ui/Section";
 import styles from "./detail.module.css";
 
@@ -39,8 +39,12 @@ export default async function WorkDetailPage({
           <h1>{project.title}</h1>
           <p>{project.subtitle}</p>
           <div className={styles.thumb}>
-            <ImagePlaceholder
-              label={`${project.title} case study imagery (public/images/project-${project.slug})`}
+            <Image
+              src={`/images/project-${project.slug}.avif`}
+              alt={`${project.title} — ${project.subtitle}`}
+              fill
+              sizes="(max-width: 809px) 100vw, 1180px"
+              style={{ objectFit: "cover" }}
             />
           </div>
         </Container>

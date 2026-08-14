@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import Image from "next/image";
 import { getPost, posts } from "@/data/posts";
 import { Container } from "@/components/ui/Container";
-import { ImagePlaceholder } from "@/components/ui/ImagePlaceholder";
 import { Section } from "@/components/ui/Section";
 import styles from "./article.module.css";
 
@@ -40,8 +40,12 @@ export default async function ArticlePage({
           <h1>{post.title}</h1>
           <p>{post.excerpt}</p>
           <div className={styles.thumb}>
-            <ImagePlaceholder
-              label={`${post.title} article imagery (public/images/post-${post.slug})`}
+            <Image
+              src={`/images/post-${post.slug}.avif`}
+              alt={post.title}
+              fill
+              sizes="(max-width: 809px) 100vw, 1180px"
+              style={{ objectFit: "cover" }}
             />
           </div>
         </Container>

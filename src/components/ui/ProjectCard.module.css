@@ -3,6 +3,7 @@
 }
 
 .thumb {
+  position: relative;
   aspect-ratio: 16 / 10;
   border-radius: var(--radius-card-image);
   overflow: hidden;

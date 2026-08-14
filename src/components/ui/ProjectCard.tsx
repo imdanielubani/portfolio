@@ -1,14 +1,18 @@
 import Link from "next/link";
+import Image from "next/image";
 import type { Project } from "@/data/projects";
-import { ImagePlaceholder } from "./ImagePlaceholder";
 import styles from "./ProjectCard.module.css";
 
 export function ProjectCard({ project }: { project: Project }) {
   return (
     <Link href={`/work/${project.slug}`} className={styles.card}>
       <div className={styles.thumb}>
-        <ImagePlaceholder
-          label={`${project.title} thumbnail (public/images/project-${project.slug})`}
+        <Image
+          src={`/images/project-${project.slug}.avif`}
+          alt={`${project.title} — ${project.subtitle}`}
+          fill
+          sizes="(max-width: 809px) 100vw, 50vw"
+          style={{ objectFit: "cover" }}
         />
       </div>
       <h3 className={styles.title}>{project.title}</h3>
