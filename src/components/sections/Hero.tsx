@@ -19,7 +19,7 @@ export function Hero() {
       </div>
 
       <div className={styles.meta}>
-        <h2>©{year}</h2>
+        <p className={styles.copyright}>©{year}</p>
         <span>/CREATING SINCE 2020</span>
       </div>
 
