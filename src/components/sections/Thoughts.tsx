@@ -2,6 +2,7 @@ import Link from "next/link";
 import { posts } from "@/data/posts";
 import { BlogCard } from "@/components/ui/BlogCard";
 import { Container } from "@/components/ui/Container";
+import { ScrollReveal } from "@/components/ui/ScrollReveal";
 import { Section } from "@/components/ui/Section";
 import { SplitText } from "@/components/ui/SplitText";
 import styles from "./Thoughts.module.css";
@@ -13,20 +14,20 @@ export function Thoughts() {
   return (
     <Section>
       <Container>
-        <div className={styles.header}>
-          <h2>Thoughts</h2>
-        </div>
-        <div className={styles.grid}>
+        <ScrollReveal className={styles.header}>
+          <h2 className="reveal-item">Thoughts</h2>
+        </ScrollReveal>
+        <ScrollReveal className={styles.grid} stagger={0.12}>
           {posts.map((post) => (
             <BlogCard key={post.slug} post={post} />
           ))}
-        </div>
-        <div className={styles.ctaPanel}>
+        </ScrollReveal>
+        <ScrollReveal className={`${styles.ctaPanel} reveal-item`}>
           <SplitText as="h3" text={CTA_TEXT} />
-          <Link href="/blog" className={styles.ctaLink}>
+          <Link href="/blog" className={`${styles.ctaLink} reveal-item`}>
             View All Work
           </Link>
-        </div>
+        </ScrollReveal>
       </Container>
     </Section>
   );

@@ -2,16 +2,19 @@ import Link from "next/link";
 import { quickLinks } from "@/data/footerLinks";
 import { Container } from "@/components/ui/Container";
 import { RollingText } from "@/components/ui/RollingText";
+import { ScrollReveal } from "@/components/ui/ScrollReveal";
 import styles from "./Footer.module.css";
 
 export function Footer() {
   return (
     <footer className={styles.footer}>
       <Container>
-        <h2>Scaling Start-ups for Growth.</h2>
+        <ScrollReveal>
+          <h2 className="reveal-item">Scaling Start-ups for Growth.</h2>
+        </ScrollReveal>
 
-        <div className={styles.columns}>
-          <div className={styles.column}>
+        <ScrollReveal className={styles.columns} stagger={0.15}>
+          <div className={`${styles.column} reveal-item`}>
             <h4>/Quick links</h4>
             <ul>
               {quickLinks.map((link) => (
@@ -24,7 +27,7 @@ export function Footer() {
             </ul>
           </div>
 
-          <div className={styles.column}>
+          <div className={`${styles.column} reveal-item`}>
             <h4>/Contact</h4>
             <ul>
               <li>
@@ -34,7 +37,7 @@ export function Footer() {
               </li>
             </ul>
           </div>
-        </div>
+        </ScrollReveal>
 
         <div className={styles.wordmark}>MAJD</div>
       </Container>

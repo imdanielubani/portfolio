@@ -1,4 +1,5 @@
 import { Container } from "@/components/ui/Container";
+import { ScrollReveal } from "@/components/ui/ScrollReveal";
 import { Section } from "@/components/ui/Section";
 import { SocialLinks } from "@/components/ui/SocialLinks";
 import { SplitText } from "@/components/ui/SplitText";
@@ -12,16 +13,16 @@ export function Contact() {
   return (
     <Section id="contact" padBottom>
       <Container>
-        <div className={styles.grid}>
+        <ScrollReveal className={styles.grid} stagger={0.15}>
           <div className={styles.copy}>
-            <h2>Let&rsquo;s talk.</h2>
+            <h2 className="reveal-item">Let&rsquo;s talk.</h2>
             <SplitText text={COPY} />
-            <div className={styles.socials}>
+            <div className={`${styles.socials} reveal-item`}>
               <SocialLinks />
             </div>
           </div>
           <ContactForm />
-        </div>
+        </ScrollReveal>
       </Container>
     </Section>
   );

@@ -4,7 +4,7 @@ import styles from "./TestimonialCard.module.css";
 
 export function TestimonialCard({ testimonial }: { testimonial: Testimonial }) {
   return (
-    <figure className={styles.card}>
+    <figure className={`${styles.card} reveal-item`}>
       <blockquote className={styles.quote}>{testimonial.quote}</blockquote>
       <figcaption className={styles.person}>
         <div className={styles.avatar}>

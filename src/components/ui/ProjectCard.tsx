@@ -3,9 +3,16 @@ import Image from "next/image";
 import type { Project } from "@/data/projects";
 import styles from "./ProjectCard.module.css";
 
-export function ProjectCard({ project }: { project: Project }) {
+export function ProjectCard({
+  project,
+  priority = false,
+}: {
+  project: Project;
+  /** Set for the first card on pages where the grid sits above the fold. */
+  priority?: boolean;
+}) {
   return (
-    <Link href={`/work/${project.slug}`} className={styles.card}>
+    <Link href={`/work/${project.slug}`} className={`${styles.card} reveal-item`}>
       <div className={styles.thumb}>
         <Image
           src={`/images/project-${project.slug}.avif`}
@@ -13,6 +20,7 @@ export function ProjectCard({ project }: { project: Project }) {
           fill
           sizes="(max-width: 809px) 100vw, 50vw"
           style={{ objectFit: "cover" }}
+          priority={priority}
         />
       </div>
       <h3 className={styles.title}>{project.title}</h3>

@@ -40,3 +40,14 @@ img {
   max-width: 100%;
   display: block;
 }
+
+/*
+ * Hidden by default so the GSAP ScrollTrigger reveal (ScrollReveal
+ * component) has no flash-of-visible-content before it wires up on
+ * mount. If JS fails to load these stay hidden — same accepted
+ * trade-off as SplitText.
+ */
+.reveal-item {
+  opacity: 0;
+  transform: translateY(24px);
+}

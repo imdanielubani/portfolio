@@ -29,7 +29,7 @@ export function ContactForm() {
   }
 
   return (
-    <form className={styles.form} onSubmit={handleSubmit}>
+    <form className={`${styles.form} reveal-item`} onSubmit={handleSubmit}>
       <div className={styles.field}>
         <label htmlFor="name">Name</label>
         <input id="name" name="name" type="text" placeholder="Enter your name" required />

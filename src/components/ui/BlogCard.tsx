@@ -3,9 +3,16 @@ import Image from "next/image";
 import type { Post } from "@/data/posts";
 import styles from "./BlogCard.module.css";
 
-export function BlogCard({ post }: { post: Post }) {
+export function BlogCard({
+  post,
+  priority = false,
+}: {
+  post: Post;
+  /** Set for the first card on pages where the grid sits above the fold. */
+  priority?: boolean;
+}) {
   return (
-    <Link href={`/blog/${post.slug}`} className={styles.card}>
+    <Link href={`/blog/${post.slug}`} className={`${styles.card} reveal-item`}>
       <div className={styles.thumb}>
         <Image
           src={`/images/post-${post.slug}.avif`}
@@ -13,6 +20,7 @@ export function BlogCard({ post }: { post: Post }) {
           fill
           sizes="(max-width: 809px) 100vw, 50vw"
           style={{ objectFit: "cover" }}
+          priority={priority}
         />
       </div>
       <div className={styles.date}>{post.date}</div>
