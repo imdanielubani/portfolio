@@ -12,6 +12,7 @@
   top: -8%;
   left: 3%;
   width: 84px;
+  aspect-ratio: 1 / 1;
   transform: rotate(-8deg);
   z-index: 1;
 }
@@ -21,6 +22,7 @@
   top: 46%;
   right: 6%;
   width: 40px;
+  aspect-ratio: 3 / 4;
   transform: rotate(6deg);
 }
 

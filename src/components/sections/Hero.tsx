@@ -1,5 +1,4 @@
-import { BoltIcon } from "@/components/icons/BoltIcon";
-import { SparkleIcon } from "@/components/icons/SparkleIcon";
+import { DecorativeShape } from "@/components/three/DecorativeShape";
 import { TextLink } from "@/components/ui/TextLink";
 import { PortraitCrossfade } from "./PortraitCrossfade";
 import styles from "./Hero.module.css";
@@ -10,8 +9,8 @@ export function Hero() {
   return (
     <section id="hero-section" className={styles.hero}>
       <div className={styles.headline}>
-        <SparkleIcon className={styles.sparkle} />
-        <BoltIcon className={styles.bolt} />
+        <DecorativeShape variant="sparkle" className={styles.sparkle} />
+        <DecorativeShape variant="bolt" className={styles.bolt} />
         <h1>SOFTWARE ENGINEER</h1>
         <div className={styles.portraitSlot}>
           <PortraitCrossfade />
