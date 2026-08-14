@@ -23,7 +23,7 @@ export function Hero() {
         <span>/CREATING SINCE 2020</span>
       </div>
 
-      <div className={styles.bio}>
+      <div id="bio-section" className={styles.bio}>
         <h2>Hey!</h2>
         <p>
           I&rsquo;m Majd, a builder based in Syria, currently working on

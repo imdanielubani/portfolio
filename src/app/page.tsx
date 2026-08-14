@@ -1,3 +1,4 @@
+import { Contact } from "@/components/sections/Contact";
 import { FeaturedProjects } from "@/components/sections/FeaturedProjects";
 import { Hero } from "@/components/sections/Hero";
 import { Manifesto } from "@/components/sections/Manifesto";
@@ -14,6 +15,7 @@ export default function HomePage() {
       <FeaturedProjects />
       <Testimonials />
       <Thoughts />
+      <Contact />
     </main>
   );
 }

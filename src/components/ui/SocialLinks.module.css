@@ -1,0 +1,31 @@
+.list {
+  display: flex;
+  gap: 12px;
+  list-style: none;
+}
+
+.link {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background var(--duration-fast) var(--ease-standard),
+    color var(--duration-fast) var(--ease-standard);
+}
+
+.link:hover {
+  background: var(--color-text);
+  color: var(--color-bg);
+}
+
+.linkOnDark {
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.linkOnDark:hover {
+  background: var(--color-text-on-dark);
+  color: var(--color-surface-dark);
+}

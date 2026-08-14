@@ -1,0 +1,25 @@
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: start;
+}
+
+.copy {
+  max-width: 480px;
+}
+
+.copy p {
+  margin-top: 16px;
+  color: var(--color-muted);
+}
+
+.socials {
+  margin-top: 32px;
+}
+
+@media (max-width: 809px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Archivo } from "next/font/google";
 import { FloatingNav } from "@/components/layout/FloatingNav";
+import { Footer } from "@/components/layout/Footer";
 import "./globals.css";
 
 const archivo = Archivo({
@@ -24,6 +25,7 @@ export default function RootLayout({
       <body>
         <FloatingNav />
         {children}
+        <Footer />
       </body>
     </html>
   );
