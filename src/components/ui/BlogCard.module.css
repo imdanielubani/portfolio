@@ -1,0 +1,24 @@
+.card {
+  display: block;
+}
+
+.thumb {
+  aspect-ratio: 4 / 3;
+  border-radius: var(--radius-card-image);
+  overflow: hidden;
+}
+
+.date {
+  margin-top: 16px;
+  color: var(--color-muted);
+  font-size: 14px;
+}
+
+.title {
+  margin-top: 8px;
+}
+
+.excerpt {
+  margin-top: 8px;
+  color: var(--color-muted);
+}
