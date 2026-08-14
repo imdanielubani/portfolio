@@ -8,6 +8,14 @@
   overflow: hidden;
 }
 
+.thumb > * {
+  transition: transform var(--duration-medium) var(--ease-standard);
+}
+
+.card:hover .thumb > * {
+  transform: scale(1.04);
+}
+
 .date {
   margin-top: 16px;
   color: var(--color-muted);

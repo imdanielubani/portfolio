@@ -10,6 +10,11 @@
 
 .thumb > * {
   border-radius: var(--radius-card-image);
+  transition: transform var(--duration-medium) var(--ease-standard);
+}
+
+.card:hover .thumb > * {
+  transform: scale(1.04);
 }
 
 .title {
