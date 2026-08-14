@@ -1,0 +1,22 @@
+.card {
+  display: block;
+}
+
+.thumb {
+  aspect-ratio: 16 / 10;
+  border-radius: var(--radius-card-image);
+  overflow: hidden;
+}
+
+.thumb > * {
+  border-radius: var(--radius-card-image);
+}
+
+.title {
+  margin-top: 16px;
+}
+
+.subtitle {
+  color: var(--color-muted);
+  font-size: 16px;
+}
